@@ -1,0 +1,31 @@
+{
+  "name": "UNCGBusTracker",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "prepare-repository": "npm i -g react-native-cli yarn;yarn install; react- native link",
+    "emulator": "emulator -avd Nexus5V6L23_x86_64 -scale 1.0",
+    "install": "react-native run-android",
+    "start": "react-native start --reset-cache",
+    "android": "npm run install && npm run start",
+    "clean": "npm cache clean && cd android && ./gradlew clean && cd ..",
+    "test": "jest"
+  },
+  "dependencies": {
+    "next-frame": "^0.2.3",
+    "react": "16.0.0-alpha.12",
+    "react-native": "0.48.3",
+    "react-native-maps": "^0.16.4",
+    "react-navigation": "^1.0.0-beta.13",
+    "react-native-table-component": "latest"
+  },
+  "devDependencies": {
+    "babel-jest": "21.0.2",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "21.1.0",
+    "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
